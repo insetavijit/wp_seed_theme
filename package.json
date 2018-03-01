@@ -1,5 +1,5 @@
 {
-  "name": "about_me",
+  "name": "wp_seed_theme",
   "version": "1.0.0",
   "description": "a simple wordpress teme devlopment seed",
   "main": "index.js",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/insetavijit/wp_theme_seed.git"
+    "url": "git+https://github.com/insetavijit/wp_seed_theme.git"
   },
   "keywords": [
     "wp_them_seed"
@@ -17,9 +17,9 @@
   "author": "avijit sarkar",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/insetavijit/wp_theme_seed/issues"
+    "url": "https://github.com/insetavijit/wp_seed_theme/issues"
   },
-  "homepage": "https://github.com/insetavijit/wp_theme_seed#readme",
+  "homepage": "https://github.com/insetavijit/wp_seed_theme#readme",
   "dependencies": {
     "bootstrap": "^4.0.0",
     "font-awesome": "^4.7.0",

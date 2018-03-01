@@ -16,9 +16,9 @@ var
         'ts':'asset/ts/**/**/*.ts',
     },
     dest = { //destination folder for all compiled scripts
-        'ts':'libs/js',
-        'scss':'libs/css',
-        'lib':"libs"
+        'ts':'inc/js',
+        'scss':'inc/css',
+        'inc':"inc"
     } 
 ;
 
@@ -27,15 +27,14 @@ var
 |*/
     gulp.task('test', function() { console.log("pluins ok"); });
     gulp.task('default',[ "font", "tsc-w" ]);
-    gulp.task('all',[ "font", "tsc-w", "sftLib" ]);
+    gulp.task('all',[ "font", "tsc-w", "sftinc" ]);
 
 /*| Short-hand |*/
     gulp.task('font', [ "scss" ] ,function() {
-        gulp.watch( pros.sass , ["scss"]);
+        gulp.watch( asset.scss , ["scss"]);
     });
     gulp.task('tsc-w', [ "tsc" ] ,function() {
-        gulp.watch( pros.tsc , ['tsc']);
-        gulp.watch( pros.tst , ['tst']);
+        gulp.watch( asset.ts , ['tsc']);
     });
 /*|main task list|*/
     /*[ sass / scss ] > [ css  ( min ) ]*/
@@ -58,17 +57,17 @@ var
                         })
                 );
             return merge([
-                tSrc.dts.pipe(gulp.dest( 'lib/infos' )),
+                tSrc.dts.pipe(gulp.dest( 'inc/typings/cust' )),
                 tSrc.js.pipe(sourceMaps.write("_map")).pipe(gulp.dest(dest.ts))
             ]);
         });
-/*|shiftLib|*/
-    gulp.task('sftLib', function() {
+/*|shiftinc|*/
+    gulp.task('sftinc', function() {
         gulp.src([
             './node_modules/jquery**/**',
             "./node_modules/font-awesome**/**",
             "./node_modules/bootstrap**/**",
             
         ])
-          .pipe(gulp.dest(dest.lib+ '/inc/'))
+          .pipe(gulp.dest(dest.inc+ '/inc/'))
     });

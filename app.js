@@ -134,7 +134,7 @@ if(cmnd.createFiles === true ){
         for(var n = 0 ; n < fileLs.length ; n++ ){
             var fileName = fileLs [ n ];
             if(!fs.existsSync( fileLs [ n ])){
-                fs.writeFile( fileLs [ n ] , '<?php \n' , function (err) {                    
+                fs.writeFile( fileLs [ n ] , ' ' , function (err) {                    
                     if(err){
                         console.log ( '[ ✖ ] error : unable to create file -> ' + fileName + "||" + err );
                         indexProcess(5);
