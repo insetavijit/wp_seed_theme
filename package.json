@@ -1,0 +1,37 @@
+{
+  "name": "about_me",
+  "version": "1.0.0",
+  "description": "a simple wordpress teme devlopment seed",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "preinstall": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/insetavijit/wp_theme_seed.git"
+  },
+  "keywords": [
+    "wp_them_seed"
+  ],
+  "author": "avijit sarkar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/insetavijit/wp_theme_seed/issues"
+  },
+  "homepage": "https://github.com/insetavijit/wp_theme_seed#readme",
+  "dependencies": {
+    "bootstrap": "^4.0.0",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.3.1"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-plumber": "^1.2.0",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^1.9.1",
+    "gulp-typescript": "^3.2.4",
+    "merge2": "^1.2.1",
+    "typescript": "^2.7.2"
+  }
+}
