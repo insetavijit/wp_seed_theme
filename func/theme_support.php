@@ -1,5 +1,15 @@
 <?php
 
+/*|
+|| Name : Wordpress theme Support
+|| Id : n/a
+|| createDate : 2018-03-01 12:16:19
+|| this file is created to handle all theme support functionalitys 
+|| + customisation API
+|| + Sidebar Registration
+|| + nav bar Ragistration 
+||FEEL FREE TO CUSTOMISE AS YOUR NEED
+|*/
 
 add_action( 'after_setup_theme', 'ins_theme_setup' );
 function ins_theme_setup(){
@@ -33,14 +43,13 @@ function ins_theme_setup(){
   ##################|  [ thumbNails size ]  |###################### 
 
     set_post_thumbnail_size( 700, 500 , true  );
-
     add_image_size( 'small-wide', 500, 300, true );
 
   ##################|  [ navBar Support ]  |###################### 
     # we are useing 2 nav bars as default
     register_nav_menus( array(
       'primary' => __( 'Primary Menu',      'inset' ),
-      'social'  => __( 'Social Links Menu', 'inset' )
+      // 'social'  => __( 'Social Links Menu', 'inset' )
     ) );
  }
 
