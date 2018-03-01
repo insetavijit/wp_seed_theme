@@ -43,7 +43,7 @@ var dirLs =
     './document/current',
 ];
 
-var fileLs = [//15 files for now
+var fileLs = [//21 files for now
     // lib > scss    
     'asset/scss/adminStyle/adminStyle.scss',
     'asset/scss/fontStyle/fontStyle.scss',
@@ -131,23 +131,25 @@ if(cmnd.createFiles === true ){
     console.log ( '\n\n [ シ ] file Creation Process Startd \n\n'  );
     if(cmnd["stopOnErr "] === true && cmnd.err > 0 ){
     }else{
-        for(var n = 0 ; n < fileLs.length ; n++ ){
-            var fileName = fileLs [ n ];
-            if(!fs.existsSync( fileLs [ n ])){
-                fs.writeFile( fileLs [ n ] , ' ' , function (err) {                    
+
+
+
+        fileLs.forEach(function(filename) {
+            if(!fs.existsSync( filename )){
+                fs.writeFile(filename, '' , function(err) {
                     if(err){
-                        console.log ( '[ ✖ ] error : unable to create file -> ' + fileName + "||" + err );
+                        console.log ( '[ ✖ ] error : unable to create file -> ' + filename + "||" + err );
                         indexProcess(5);
                     }else{
-                        console.log('[ ✓ ] Created file -> ' + fileName);
+                        console.log('[ ✓ ] File Created -> ' + filename);
                         indexProcess (1) ;
                     }
                 });
             }else{
-                console.log('[ ✓ ] File is Exist Man ' + fileLs [ n ]);  
+                console.log('[ ✓ ] File is Exist Man -> ' + filename);  
                 indexProcess(3);
             }
-        }
+        });
     }
 }
 
