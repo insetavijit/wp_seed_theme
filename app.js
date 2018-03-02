@@ -41,6 +41,8 @@ var dirLs =
     './document',
     './document/resource',
     './document/current',
+
+    '.tmp'
 ];
 
 var fileLs = [//21 files for now
@@ -65,6 +67,11 @@ var fileLs = [//21 files for now
     'document/current/widgets.md',
     'document/current/support.md',
     'document/current/about.md',
+    //.tmp > not to build | readymade html files for html formatting and editing those are temporary
+    '.tmp/xyz.html',
+    '.tmp/x.html',
+    '.tmp/y.html',
+    '.tmp/z.html',
     //files for root
     'style.css',
     'header.php',

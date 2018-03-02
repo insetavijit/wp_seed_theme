@@ -69,5 +69,5 @@ var
             "./node_modules/bootstrap**/**",
             
         ])
-          .pipe(gulp.dest(dest.inc+ '/inc/'))
+          .pipe(gulp.dest(dest.inc+ '/vendor/'))
     });

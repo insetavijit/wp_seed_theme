@@ -6,7 +6,12 @@
 ### Myremoves ###
 
 inc
+lib
+document
+asset
 
+##### | temporary files | ######
+.tmp
 
 
 ### Node ###
