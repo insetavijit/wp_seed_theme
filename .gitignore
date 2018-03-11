@@ -6,13 +6,11 @@
 ### Myremoves ###
 
 inc
-lib
-document
-asset
+
 
 ##### | temporary files | ######
 .tmp
-
+.tmp.drivedownload
 
 ### Node ###
 # Logs
