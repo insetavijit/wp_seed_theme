@@ -17,6 +17,7 @@ var dir = './tmp';
 var dirLs = 
 [ // 21 dir for now
     './asset',
+    './node_modules',
     './asset/scss',
     './asset/scss/adminStyle',
     './asset/scss/fontStyle',
